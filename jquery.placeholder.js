@@ -37,19 +37,19 @@
 
 	// used with hideOnInput
 	var ignoreKeys = [
-        27, // Escape
-        33, // Page up
-        34, // Page down
-        35, // End
-        36, // Home
-        37, // Left
-        38, // Up
-        39, // Right
-        40  // Down
+		27, // Escape
+		33, // Page up
+		34, // Page down
+		35, // End
+		36, // Home
+		37, // Left
+		38, // Up
+		39, // Right
+		40  // Down
 	];
 	var deleteKeys = [
-	    8,  // Backspace
-        46  // Delete
+		8,  // Backspace
+		46  // Delete
 	];
 
 	var setupPlaceholder = function(input, options) {
