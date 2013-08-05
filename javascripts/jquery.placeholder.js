@@ -32,7 +32,8 @@
 
 	var defaults = {
 		force: false,       // force all browsers to use polyfill
-		hideOnInput: true   // hide placeholder on text input instead of focus (consistent with recent browsers)
+		hideOnInput: true,   // hide placeholder on text input instead of focus (consistent with recent browsers)
+		placeholderClass: 'placeholder'
 	};
 
 	// used with hideOnInput
@@ -76,7 +77,7 @@
 		if (isNaN(zIndex) || !zIndex) { zIndex = 1; }
 
 		// create the placeholder
-		$placeholder = $('<span>').addClass('placeholder').html(text);
+		$placeholder = $('<span>').addClass(options.placeholderClass).html(text);
 		$placeholder.css(styles);
 		$placeholder.css({
 			'cursor': $input.css('cursor') || 'text',
