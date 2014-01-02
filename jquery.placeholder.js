@@ -25,7 +25,7 @@
 		'padding-top', 'padding-right', 'padding-bottom', 'padding-left',
 		'margin-top', 'margin-right', 'margin-bottom', 'margin-left',
 		'border-top-width', 'border-right-width', 'border-bottom-width', 'border-left-width',
-		'line-height', 'font-size', 'font-family', 'width', 'height',
+		'line-height', 'font-size', 'font-family', 'width', 'height', 'min-height',
 		'top', 'left', 'right', 'bottom'
 	];
 
@@ -130,7 +130,7 @@
 				$placeholder.hide();
 			});
 		}
-		
+
 		$input.on('blur.placeholder', function() {
 			$placeholder.toggle(!$.trim($input.val()).length);
 		});
