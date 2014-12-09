@@ -1,3 +1,4 @@
+/* global define, require */
 /**
  * placeholder - HTML5 input placeholder polyfill
  * Copyright (c) 2012 DIY Co
@@ -13,11 +14,17 @@
  *
  * @author Brian Reavis <brian@thirdroute.com>
  *
- * this fork: https://github.com/johnhunter/jquery-placeholder
- * @author John Hunter <john@johnhunter.info>
  */
 
-(function($) {
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    factory(require('jquery'));
+  } else {
+    factory(jQuery);
+  }
+}(function ($) {
 
 	var NATIVE_SUPPORT = ('placeholder' in document.createElement('input'));
 	var CSS_PROPERTIES = [
@@ -166,4 +173,4 @@
 		return this;
 	};
 
-})(jQuery);
+}));
